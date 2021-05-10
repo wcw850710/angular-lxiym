@@ -1,0 +1,10 @@
+<ul class="tabbar">
+  <li *ngFor="let e of menus; index as i; trackBy: trackByFn">
+    <a
+      [href]="e.link"
+      [class.active]="checkSelected(i)"
+      (click)="onSelectedMenu(i)"
+    >{{e.title}}</a>
+    <i class="indicator" *ngIf="checkSelected(i)"></i>
+  </li>
+</ul>
